@@ -3,6 +3,8 @@ package _03_char._3_pi_aloud;
 import java.io.IOException;
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class PiAloud {
 	/***********  SOUND ***************
 	 * Some computers are unable to play sounds. 
@@ -22,9 +24,17 @@ public static void main(String[] args) {
 	// Check the console shows 3.1
 			System.out.println(pi.charAt(0)+" "+(pi.charAt(1)+" "+(pi.charAt(2))));
 	// 4. Print ALL the digits of the Pi String, putting each digit on a new line  (hint: use a loop)
-for (int i = 0; i < ; i++) {
-	
+for (int i = 0; i < pi.length(); i++) {
+	System.out.println(pi.charAt(i));
+String piresponse = JOptionPane.showInputDialog("Name a digit of pi.");
+if (piresponse.charAt(0) ==pi.charAt(i)) {
+	JOptionPane.showMessageDialog(null, "you got it right.");
 }
+else {
+	JOptionPane.showMessageDialog(null, "you got it wrong.");
+}
+}
+
 	// 5. Skip this step if your computer cannot play sounds. 
 	//		if (canPlaySounds) {
 	//				 Use the speak() method to speak each digit of Pi.   
@@ -33,6 +43,7 @@ for (int i = 0; i < ; i++) {
 	
 	// [CHALLENGE]
 	// *6. Get a character from the user using the getInputFromUser() method
+
 	// *7. Compare the users' char to the next digit of Pi
 	// *8. If they are correct, print out "correct". If they are not, print "incorrect" 
 	
